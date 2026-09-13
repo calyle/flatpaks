@@ -23,12 +23,9 @@ modules:
     build-commands:
       - install -Dvm755 -t ${FLATPAK_DEST}/bin apply_extra
       - install -Dvm755 bilibili.sh ${FLATPAK_DEST}/bin/bilibili
-      - install -Dvm644 -t ${FLATPAK_DEST}/share/applications
-        ${FLATPAK_ID}.desktop
-      - install -Dvm644 -t ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps
-        ${FLATPAK_ID}.svg
-      - install -Dvm644 -t ${FLATPAK_DEST}/share/metainfo
-        ${FLATPAK_ID}.metainfo.xml
+      - install -Dvm644 -t ${FLATPAK_DEST}/share/applications ${FLATPAK_ID}.desktop
+      - install -Dvm644 -t ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps ${FLATPAK_ID}.svg
+      - install -Dvm644 -t ${FLATPAK_DEST}/share/metainfo ${FLATPAK_ID}.metainfo.xml
     sources:
       - type: extra-data
         only-arches:
@@ -48,9 +45,9 @@ modules:
       - type: extra-data
         only-arches:
           - aarch64
-        url: https://github.com/msojocs/bilibili-linux/releases/download/v1.17.6-1/bilibili-v1.17.6-1-arm64.tar.gz
-        sha256: 980ade7d8802b519bc6c5d7f6e5fa930928fbd6d04ba5fbbd7aa2b6efeabf2da
-        size: 163315711
+        url: https://github.com/msojocs/bilibili-linux/releases/download/v1.18.0-1/bilibili-v1.18.0-1-arm64.tar.gz
+        sha256: 0517d98e8cd9124596bca8e9b81366c2e07da7edb77d454171fe2a6a485ae647
+        size: 186369163
         filename: bilibili.tar.gz
         x-checker-data:
           type: json
@@ -69,8 +66,8 @@ modules:
       - type: script
         dest-filename: bilibili.sh
         commands:
-          - exec zypak-wrapper /app/extra/bilibili/electron/electron
-            /app/extra/bilibili/app/app.asar $@
+          - exec zypak-wrapper /app/extra/bilibili/electron/electron /app/extra/bilibili/app/app.asar
+            $@
       - type: script
         dest-filename: apply_extra
         commands:
