@@ -1,7 +1,7 @@
 {
     "app-id": "org.wezfurlong.wezterm",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "25.08",
+    "runtime-version": "26.08",
     "sdk": "org.freedesktop.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -46,7 +46,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/wezterm/wezterm.git",
-                    "commit": "fff02ca501c3b457f99b467a86061d2b150c51f2"
+                    "commit": "cab25161054c50fd6c705db4ceefef0f1e5a9575"
                 },
                 {
                   "type": "file",
